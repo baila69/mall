@@ -11,7 +11,7 @@ import MainTabbar from 'components/content/mainTabbar/MainTabbar'
 export default {
   name:'App',
   components:{
-    MainTabbar,
+    MainTabbar
   }
   
 }

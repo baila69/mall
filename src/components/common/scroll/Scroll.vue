@@ -53,6 +53,9 @@ export default {
     },
     finishPullUp(){
       this.scroll.finishPullUp()
+    },
+    refresh(){
+      this.scroll.refresh()
     }
   },
 }

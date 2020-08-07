@@ -57,9 +57,15 @@ export default {
     //1.请求多个数据
     this.getHomeMultidata(),
     
+    //2.请求商品数据
     this.getHomeGoods('pop'),
     this.getHomeGoods('new'),
     this.getHomeGoods('sell')
+
+    //3.监听item图片加载完成
+    this.$bus.$on('itemImageLoad',() => {
+      this.$refs.scroll.refresh()
+    })
   },
   methods: {
     /**
@@ -77,7 +83,7 @@ export default {
         this.goods[type].list.push(...res.data.list)
         this.goods[type].page += 1
       })
-      this.$refs.scroll.finishPullUp()
+      // this.$refs.scroll.finishPullUp()
     },
 
     /**
